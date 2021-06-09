@@ -11,7 +11,7 @@ basic.forever(function () {
     } else if (input.compassHeading() == 135) {
         basic.showArrow(ArrowNames.SouthEast)
         basic.showString("SE")
-    } else if (input.compassHeading() >= 175 && input.compassHeading() <= 185) {
+    } else if (Math.abs(input.compassHeading() - 180) < 5) {
         basic.showArrow(ArrowNames.South)
         basic.showString("S")
     } else if (input.compassHeading() == 225) {
