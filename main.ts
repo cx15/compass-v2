@@ -5,13 +5,13 @@ basic.forever(function () {
     } else if (input.compassHeading() == 45) {
         basic.showArrow(ArrowNames.NorthEast)
         basic.showString("NE")
-    } else if (input.compassHeading() == 180) {
+    } else if (input.compassHeading() == 90) {
         basic.showArrow(ArrowNames.East)
         basic.showString("E")
     } else if (input.compassHeading() == 135) {
         basic.showArrow(ArrowNames.SouthEast)
         basic.showString("SE")
-    } else if (input.compassHeading() == 180) {
+    } else if (input.compassHeading() >= 175 && input.compassHeading() <= 185) {
         basic.showArrow(ArrowNames.South)
         basic.showString("S")
     } else if (input.compassHeading() == 225) {
@@ -24,6 +24,12 @@ basic.forever(function () {
         basic.showArrow(ArrowNames.NorthWest)
         basic.showString("NW")
     } else {
-    	
+        basic.showLeds(`
+            . . # . .
+            . # . # .
+            # . . . #
+            . # . # .
+            . . # . .
+            `)
     }
 })
